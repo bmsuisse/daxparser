@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "daxparser"
+version = "0.1.2"
+description = ""
+authors = ["Adrian Ehrsam <myemailiscensored@bmsuisse.ch>"]
+readme = "README.md"
+packages = [{include="daxparser"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.31.0"
+antlr4-python3-runtime = "^4.13.0"
+
+[tool.pyright]
+venv = ".venv"
+venvPath = "."
+pythonVersion = "3.9"
+exclude = ["**/__pycache__", "daxparser/DAXLexer.py"]
+typeCheckingMode = "basic"
+
+
+[tool.poetry.group.dev.dependencies]
+pyright = "^1.1.322"
+black = "^23.7.0"
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
